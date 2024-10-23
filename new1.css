@@ -1,0 +1,255 @@
+/* general styles */
+
+a:link:hover, a:visited:hover {
+  color: #ff6666;
+  /*color: #eaa900;*/
+}
+
+a:link, a:visited {
+  color: #0000cc;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+/* don't put borders around hyperlink images */
+
+a img {
+  border-style: none;
+}
+
+h3 {
+  font-size: 12pt;
+}
+
+* {
+  /* default font */
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* sidebar and body positioning */
+
+#sidebar {
+  position: absolute;
+  left: 4px;
+  width: 120px;
+}
+
+#body {
+  margin-left: 126px;
+  min-width: 500px;
+  position: relative;
+}
+
+/* sidebar formatting */
+
+#sidebar {
+  /* border around entire sidebar */
+  /* border: 2px solid #ff9999; */
+  /* border: 2px solid #ff9999; */
+  overflow: hidden;
+}
+
+#sidebar h2 {
+  /* sidebar main header ("Mark Ryan") */
+  padding: 0.1em;
+  /* background-color: #ffdddd; */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#sidebar h2 a:link,
+#sidebar h2 a:visited {
+  /* sidebar main header link */
+  font-size: 14pt;
+  font-weight: bold;
+}
+#sidebar h2 a:link,
+#sidebar h2 a:visited {
+  /* sidebar main header link */
+  color: #990066;
+}
+#sidebar h2 a:link:hover,
+#sidebar h2 a:visited:hover {
+  /* sidebar main header link */
+  color: #ff6666;
+}
+
+#sidebar h3 {
+  /* sidebar sub-heading ("Research", "Teaching" etc.) */
+  padding: 0.1em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888; /* #ff9999; */
+  /* color: #990066; */
+}
+
+#sidebar ul {
+  /* sidebar list formatting */
+  list-style-type: none;
+  margin: 0;
+  padding: 0.1em;
+}
+
+#body div {
+  /* space out the frame in the main section (i.e. not the sidebar) */
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/* colourful frames */
+
+/* frame contents gets wrapped in a .content div, so
+   we can have the header flush with the border, and at
+   the same time we can avoid the content being crammed
+   against the border.
+   With more modern CSS (i.e. anything but IE6) we could
+   avoid this, with the '>' selector. */
+
+/* To use a colourful frame:
+    <div class="orangebox">
+      <h2>Box heading</h2>
+      <div class="content">
+        insert content here
+      </div>
+    </div>
+*/
+
+div.greenbox .content,
+div.orangebox .content,
+div.bluebox .content,
+div.yellowbox .content,
+div.blackbox .content,
+div.navybox .content,
+div.darkgreenbox .content,
+div.redbox .content,
+div.pinkbox .content {
+  margin: 8px;    /* stand-off from border */
+}
+
+div.greenbox h2,
+div.orangebox h2,
+div.bluebox h2,
+div.yellowbox h2,
+div.blackbox h2,
+div.navybox h2,
+div.darkgreenbox h2,
+div.redbox h2,
+div.pinkbox h2 {
+  margin: 0 0 0.5em 0;
+  font-size: 14pt;
+  font-weight: bold;
+  padding: 0.1em;
+}
+
+div.greenbox { border: 2px solid #99cc33; }
+div.greenbox h2 { background-color: #ccee99; }
+div.greenbox h3 { color: #4c6619; }
+div.orangebox { border: 2px solid #eaa900; }
+div.orangebox h2 { background-color: #fed669; }
+div.orangebox h3 { color: #eaa900; }
+div.bluebox { border: 2px solid #007bff; }
+div.bluebox h2 { background-color: #d4dee8; }
+div.bluebox h3 { color: #003d80; }
+div.yellowbox { border: 2px solid #dddd00; }
+div.yellowbox h2 { background-color: #ffff99; }
+div.blackbox { border: 2px solid #000; }
+div.blackbox h2 { background-color: #000; color: #fff; }
+div.navybox { border: 2px solid #007; }
+div.navybox h2 { background-color: #007; color: #fff; }
+div.darkgreenbox { border: 2px solid #050; }
+div.darkgreenbox h2 { background-color: #050; color: #fff; }
+div.darkgreenbox h3 { color: #050; }
+div.redbox { border: 2px solid #a00; }
+div.redbox h2 { background-color: #a00; color: #fff; }
+div.redbox h3 { color: #500; }
+div.pinkbox { border: 2px solid #ff9999; }
+div.pinkbox h2 { background-color: #ffdddd; }
+div.pinkbox h3 { color: #804c4c; }
+
+/* main page header */
+
+div.mainheader {
+  text-align: center;
+  min-height: 169px; /* to accomodate photograph */
+  height: auto !important;
+  height: 169px;
+}
+
+div.mainheader img {
+  float: right;
+}
+
+div.mainheader h1 {
+  margin-top: 0.6em;
+  font-size: 24pt;
+  font-weight: normal;
+}
+
+/* main header for other pages */
+
+div.pageheader {
+  text-align: center;
+}
+
+div.pageheader h1 {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+/* a floating image / video */
+div.floatimg {
+  float: right;
+  margin: 10px; /* stand off from other objects */
+  text-align: center;
+}
+
+div.floatimg p {
+  margin-top: 2px; /* caption shouldn't be too far away */
+}
+
+/* page-specific styles */
+
+/* Research Activities, main page */
+ul.research_activities > li {
+  margin-top: 1em;
+}
+
+/* Committee memberships, research coordination activities, main page */
+
+.committee_memberships {
+  font-size: 11pt;        /* will it fit on one line? :) */
+  margin-bottom: 1em;     /* fix collapsed space - without it, next bullet point will
+                             be stuck to committee_memberships*/
+}
+.committee_memberships h4 {
+  font-weight: normal;    /* the 'heading' isn't supposed to stand out! */
+}
+.committee_memberships ul {
+  list-style-type: none;  /* don't show bullet points next to the years */
+}
+.committee_memberships ul li ul li,
+.committee_memberships ul li h5,
+.committee_memberships ul li ul {
+  display: inline;        /* put the year, and the list of links, all on the same line */
+}
+.committee_memberships ul {
+  margin-left: 0;         /* keep the list flush left */
+  padding-left: 0;
+}
+
+/* Book list */
+
+.books_list {
+  text-align: center;     /* put the books in the middle of the page */
+}
+.books_list ul li {
+  display: inline;        /* display the books next to each other
+                             (this hides bullet points, too */
+}
+.books_list ul li a img {
+  border: 1px solid #ccc; /* nice border, */
+  padding: 4px;           /* but not too close to the book */
+}
